@@ -69,7 +69,7 @@ for times in range (0,2) :
     else : t1 += crn1
 
     if crn2 == 11 or crn2 == 12 or crn2 == 13 :
-        t1 += 10
+        t2 += 10
     elif crn2 == 0 :
         if t2 > 10 :
             t2 += 1
@@ -123,8 +123,8 @@ while t1 < 21 and t2 < 21 :
                     crn1 = 11
                     t1 += crn1
             else : t1 += crn1
-            
-            print ('Dealt card:' , crnt1 , 'of' , crd1)
+            if st == 'h' or 'hit' or 'H' or 'Hit' :
+                print ('Dealt card:' , crnt1 , 'of' , crd1)
             
     else :
         st = input('(Hit/Stand): ')
@@ -160,7 +160,8 @@ while t1 < 21 and t2 < 21 :
                     t2 += 11
             else : t2 += crn2
             
-        print ('Dealt card:' , crnt2 , 'of' , crd2)
+            if st == 'h' or 'hit' or 'H' or 'Hit' :
+                print ('Dealt card:' , crnt2 , 'of' , crd2)
     
     counter += 1
     print ('P1:' , t1)
