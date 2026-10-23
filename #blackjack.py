@@ -37,25 +37,21 @@ for times in range (0,2) :
 
     if crn1 == 0 :
         if t1 > 10 :
-            crn1 = 1
-            t1 += crn1
+            t1 += 1
         else : 
-            crn1 = 11
-            t1 += crn1
+            t1 += 11
     else : t1 += crn1
 
     if crn2 == 0 :
         if t2 > 10 :
-            crn2 = 1
-            t2 += crn2
+            t2 += 1
         else : 
-            crn2 = 11
-            t2 += crn2
+            t2 += 11
     else : t2 += crn2
-    if crn1 == 11 :    
+    if crn1 == 0 :    
         print ('P1 , Cards dealt:' , 'Ace of' , crd1)
     else : print ('P1 , Cards dealt:' , crn1 , 'of' , crd1) 
-    if crn2 == 11 :
+    if crn2 == 0 :
         print ('P2 , Cards dealt:' , 'Ace of' , crd2)
     else : print ('P2 , Cards dealt:' , crn2 , 'of' , crd2)
 print ('P1:' , t1)
@@ -81,13 +77,11 @@ while t1 < 21 and t2 < 21 :
             crn1 = random.randrange(0,11)
             if crn1 == 0 :
                 if t1 > 10 :
-                    crn1 = 1
-                    t1 += crn1
+                    t1 += 1
                 else : 
-                    crn1 = 11
-                    t1 += crn1
+                    t1 += 11
             else : t1 += crn1
-            if crn1 == 11 :
+            if crn1 == 0 :
                 print ('Dealt card:' , 'Ace of' , crd1)
             else : print ('Dealt card:' , crn1 , 'of' , crd1)
     else :
@@ -105,13 +99,11 @@ while t1 < 21 and t2 < 21 :
             crn2 = random.randrange(0,11)
             if crn2 == 0 :
                 if t2 > 10 :
-                    crn2 = 1
-                    t2 += crn2
+                    t2 += 1
                 else : 
-                    crn2 = 11
-                    t2 += crn2
+                    t2 += 11
             else : t2 += crn2
-            if crn2 == 11 :
+            if crn2 == 0 :
                 print ('Dealt card:' , ' Ace of' , crd2)
             else : print ('Dealt card:' , crn2 , 'of' , crd2)
     counter += 1
