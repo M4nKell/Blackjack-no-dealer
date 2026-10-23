@@ -32,28 +32,55 @@ for times in range (0,2) :
     if tp2 == 4 :
         crd2 = 'Spades'
 
-    crn1 = random.randrange(0,11)
-    crn2 = random.randrange(0,11)
-
-    if crn1 == 0 :
+    crn1 = random.randrange(0,14)
+    crn2 = random.randrange(0,14)
+    
+    if 0 < crn1 < 11 :
+        crnt1 = crn1
+    elif crn1 == 0 :
+        crnt1 = 'Ace'
+    elif crn1 == 11 :
+        crnt1 = 'King'
+    elif crn1 == 12 :
+        crnt1 = 'Queen'
+    elif crn1 == 13 :
+        crnt1 = 'Joker'
+    
+    if 0 < crn2 < 11 :
+        crnt2 = crn2
+    elif crn2 == 0 :
+        crnt2 = 'Ace'
+    elif crn2 == 11 :
+        crnt2 = 'King'
+    elif crn2 == 12 :
+        crnt2 = 'Queen'
+    elif crn2 == 13 :
+        crnt2 = 'Joker'
+    
+    
+    if crn1 == 11 or crn1 == 12 or crn1 == 13 :
+        t1 += 10
+    elif crn1 == 0 :
         if t1 > 10 :
             t1 += 1
         else : 
-            t1 += 11
+            crn1 = 11
+            t1 += crn1
     else : t1 += crn1
 
-    if crn2 == 0 :
+    if crn2 == 11 or crn2 == 12 or crn2 == 13 :
+        t1 += 10
+    elif crn2 == 0 :
         if t2 > 10 :
             t2 += 1
         else : 
             t2 += 11
     else : t2 += crn2
-    if crn1 == 0 :    
-        print ('P1 , Cards dealt:' , 'Ace of' , crd1)
-    else : print ('P1 , Cards dealt:' , crn1 , 'of' , crd1) 
-    if crn2 == 0 :
-        print ('P2 , Cards dealt:' , 'Ace of' , crd2)
-    else : print ('P2 , Cards dealt:' , crn2 , 'of' , crd2)
+
+    print ('P1 , Cards dealt:' , crnt1 , 'of' , crd1)
+    
+    print ('P2 , Cards dealt:' , crnt2 , 'of' , crd2)
+    
 print ('P1:' , t1)
 print ('P2:' , t2)
 if t1 == 21 :
@@ -74,16 +101,31 @@ while t1 < 21 and t2 < 21 :
                 crd1 = 'Hearts'
             if tp1 == 4 :
                 crd1 = 'Spades'
-            crn1 = random.randrange(0,11)
-            if crn1 == 0 :
+            crn1 = random.randrange(0,14)
+            
+            if 0 < crn1 < 11 :
+                crnt1 = crn1
+            elif crn1 == 0 :
+                crnt1 = 'Ace'
+            elif crn1 == 11 :
+                crnt1 = 'King'
+            elif crn1 == 12 :
+                crnt1 = 'Queen'
+            elif crn1 == 13 :
+                crnt1 = 'Joker'
+            
+            if crn1 == 11 or crn1 == 12 or crn1 == 13 :
+                t1 += 10
+            elif crn1 == 0 :
                 if t1 > 10 :
                     t1 += 1
                 else : 
-                    t1 += 11
+                    crn1 = 11
+                    t1 += crn1
             else : t1 += crn1
-            if crn1 == 0 :
-                print ('Dealt card:' , 'Ace of' , crd1)
-            else : print ('Dealt card:' , crn1 , 'of' , crd1)
+            
+            print ('Dealt card:' , crnt1 , 'of' , crd1)
+            
     else :
         st = input('(Hit/Stand): ')
         if  st == 'h' or st == 'hit' or st == 'H' or st == 'Hit' :
@@ -96,16 +138,30 @@ while t1 < 21 and t2 < 21 :
                 crd2 = 'Hearts'
             if tp2 == 4 :
                 crd2 = 'Spades'
-            crn2 = random.randrange(0,11)
-            if crn2 == 0 :
+            crn2 = random.randrange(0,14)
+            
+            if 0 < crn2 < 11 :
+                crnt2 = crn2
+            elif crn2 == 0 :
+                crnt2 = 'Ace'
+            elif crn2 == 11 :
+                crnt2 = 'King'
+            elif crn2 == 12 :
+                crnt2 = 'Queen'
+            elif crn2 == 13 :
+                crnt2 = 'Joker'
+
+            if crn2 == 11 or crn2 == 12 or crn2 == 13 :
+                t1 += 10
+            elif crn2 == 0 :
                 if t2 > 10 :
                     t2 += 1
                 else : 
                     t2 += 11
             else : t2 += crn2
-            if crn2 == 0 :
-                print ('Dealt card:' , ' Ace of' , crd2)
-            else : print ('Dealt card:' , crn2 , 'of' , crd2)
+            
+        print ('Dealt card:' , crnt2 , 'of' , crd2)
+    
     counter += 1
     print ('P1:' , t1)
     print ('P2:' , t2)
