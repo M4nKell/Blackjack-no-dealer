@@ -84,9 +84,9 @@ for times in range (0,2) :
 print ('P1:' , t1)
 print ('P2:' , t2)
 if t1 == 21 :
-    print ('Blackcack. Player 1 wins!')
+    print ('Blackjack.')
 if t2 == 21 :
-    print ('Blackcack. Player 2 wins!')
+    print ('Blackjack.')
 
 while t1 < 21 and t2 < 21 :
     if (counter % 2) == 0 :
